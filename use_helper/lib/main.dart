@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:use_helper/screens/home_screen.dart';
-import 'package:use_helper/screens/questions_screen.dart';
+import 'package:use_helper/screens/start_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,8 +10,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: QuestionsScreen(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          fontFamily: "Bitter",
+          colorScheme:
+              ColorScheme.fromSeed(seedColor: Colors.deepOrange.shade400)),
+      home: StartScreen(),
     );
   }
 }

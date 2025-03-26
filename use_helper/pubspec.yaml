@@ -17,3 +17,14 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+    - family: Bitter
+    - fonts:
+        - asset: fonts\Bitter-SemiBold.ttf
+        - asset: fonts\Bitter-Italic.ttf
+
