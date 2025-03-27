@@ -5,7 +5,6 @@ class StudyWidget extends StatelessWidget {
   final String titleText;
   final String additionalText;
 
-  // ignore: use_key_in_widget_constructors
   const StudyWidget(
       {required this.imageLink,
       required this.titleText,
@@ -17,6 +16,7 @@ class StudyWidget extends StatelessWidget {
     return Padding(
         padding: const EdgeInsets.all(20.0),
         child: Container(
+          alignment: Alignment.center,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16.0),
             color: Colors.white,
@@ -35,7 +35,7 @@ class StudyWidget extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text(
                       titleText,

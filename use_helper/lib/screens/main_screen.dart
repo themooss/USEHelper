@@ -52,11 +52,19 @@ class _NavigatorBottomWidgetState extends State<NavigatorBottomWidget> {
     return Scaffold(
       backgroundColor: Color(0xfffffafa),
       appBar: AppBar(
-        title: Text(_currentItem),
-        titleTextStyle: TextStyle(fontSize: 20, color: Colors.white),
-        centerTitle: true,
-        backgroundColor: const Color(0xfff7022a),
-      ),
+          title: Text(_currentItem),
+          titleTextStyle: TextStyle(fontSize: 20, color: Colors.white),
+          centerTitle: true,
+          backgroundColor: const Color(0xfff7022a),
+          leading: Builder(builder: (context) {
+            return IconButton(
+                color: Color(0xfffffafa),
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+                icon: Icon(Icons.menu));
+          })),
+      drawer: MainDrawerWidget(),
       body: _navigationPages[_itemSelected],
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _itemSelected,
@@ -74,5 +82,29 @@ class _NavigatorBottomWidgetState extends State<NavigatorBottomWidget> {
                 icon: Icon(Icons.list_rounded), label: "Меню")
           ]),
     );
+  }
+}
+
+class MainDrawerWidget extends StatelessWidget {
+  const MainDrawerWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+        child: ListView(
+      padding: EdgeInsets.zero,
+      children: [
+        const DrawerHeader(
+            decoration: BoxDecoration(color: Color(0xfff7022a)),
+            child: Text(
+              "Профиль",
+              style: TextStyle(color: Color(0xfffffafa)),
+              textAlign: TextAlign.center,
+            )),
+        ListTile(
+          title: const Text("Настройки"),
+        )
+      ],
+    ));
   }
 }
