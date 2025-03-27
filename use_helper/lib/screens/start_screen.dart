@@ -10,7 +10,7 @@ class StartScreen extends StatelessWidget {
           title: Text('Привет!'),
           titleTextStyle: TextStyle(fontSize: 20, color: Colors.white),
           centerTitle: true,
-          backgroundColor: const Color(0xffD85814),
+          backgroundColor: const Color(0xfff7022a),
         ),
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.only(bottom: 20.0),
@@ -21,7 +21,7 @@ class StartScreen extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xffD85814),
+                    backgroundColor: const Color(0xfff7022a),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15)),
                   ),
@@ -29,14 +29,14 @@ class StartScreen extends StatelessWidget {
                     "Вперёд!",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        color: Colors.white,
+                        color: Color(0xfffffafa),
                         fontWeight: FontWeight.bold,
                         fontSize: 18),
                   ),
                 )),
           ]),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xfffffafa),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -51,7 +51,7 @@ class StartScreen extends StatelessWidget {
               style: TextStyle(
                   fontSize: 36,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xffD85814)),
+                  color: Color(0xfff7022a)),
             ),
 
             const SizedBox(

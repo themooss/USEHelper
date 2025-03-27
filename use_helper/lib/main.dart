@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:use_helper/screens/start_screen.dart';
+import 'package:use_helper/screens/main_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -14,9 +14,8 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           fontFamily: "Bitter",
-          colorScheme:
-              ColorScheme.fromSeed(seedColor: Colors.deepOrange.shade400)),
-      home: StartScreen(),
+          colorScheme: ColorScheme.fromSeed(seedColor: Color(0xfffffafa))),
+      home: MainScreen(),
     );
   }
 }
